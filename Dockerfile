@@ -1,4 +1,4 @@
-FROM php:apache
+FROM php:7-apache
 RUN set -xe; \
     apt-get update && apt-get install -y \
         libfreetype6-dev \
