@@ -11,6 +11,6 @@ RUN set -xe; \
     docker-php-ext-install mysqli;
 
 # adapt userid and groupid
-ONBUILD ARG WPUID 
-ONBUILD ARG WPGID
-ONBUILD RUN usermod -u $WPUID www-data; groupmod -g $WPGID www-data;
+ONBUILD ARG WWW_UID 
+ONBUILD ARG WWW_GID
+ONBUILD RUN usermod -u $WWW_UID www-data; groupmod -g $WWW_GID www-data;
